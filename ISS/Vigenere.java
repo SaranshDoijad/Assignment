@@ -1,5 +1,6 @@
 
 import java.util.*;
+
 public class Vigenere{
 	public static void main(String[] args){
 		int vtable[][]=new int[26][26];
@@ -24,7 +25,7 @@ public class Vigenere{
 			value=65+in;
 			in++;
 		}
-		System.out.println("Enter a message or plaintext(Only Capital letter is allowed):");
+		System.out.println("Enter a message (Enter only Capital letter ):");
 		String m=sc.next();
 		System.out.println("Enter valid key(Enter only Capital Letter):");
 		String k=sc.next();
@@ -44,7 +45,7 @@ public class Vigenere{
 		}
 		}
 		System.out.println("New key is:"+k1);
-		System.out.println("*****Encryption of given message is*****");
+		System.out.print("Encryption of given message is:-");
 		for(int y=0;y<m.length();y++){
 			int plaintextletter=m.charAt(y);
 			int keytextletter=k1.charAt(y);
@@ -61,7 +62,7 @@ public class Vigenere{
 			}
 		}
 		System.out.println();
-		System.out.println("*****Decryption of given ciphertext is*****");
+		System.out.print("Decryption of given ciphertext is:-");
 		for(int y=0;y<m.length();y++){
 			int keytextletter=k1.charAt(y);
 			int ciphertextletter=ciphertext[0][y];
